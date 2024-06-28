@@ -12,7 +12,7 @@ export class ChatController {
   }
 
   @Post()
-  createMsg(@Body(new ValidationPipe()) chat: Chat): Promise<Chat> {
+  createMsg(@Body(new ValidationPipe()) chat: Chat): Promise<string> {
     return this.chatService.createMsg(chat);
   }
 }
